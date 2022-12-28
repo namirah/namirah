@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Source+Sans+Pro:300,400,700" />
+    <style>
+        body {
+            font-family: 'Acme', sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .container {
+            width: 1024px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo {
+            width: 100%;
+        }
+
+        .code {
+            position: absolute;
+            top: 162px;
+            left: 509px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 193px;
+            height: 50px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .code p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 50px;
+        }
+
+        .code img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+
+        .appstore-logo {
+            position: absolute;
+            top: 190px;
+            right: 269px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .button {
+            width: 200px;
+            height: 50px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #EE5A24;
+            color: white;
+        }
+
+        .button p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 50px;
+        }
+
+        .footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer img {
+            width: 200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="assets/halloweeen-bg.jpg" alt="Logo" />
+            <div class="code">
+                <p>HALLOW10</p>
+                <img src="assets/copy.png" alt="Copy" onclick="copyToClipboard('HALLOW10')" />
+            </div>
+            <img class="appstore-logo" src="assets/appstore.jpg" alt="App Store"
+                onclick="window.open('https://itunes.apple.com/us/app/online-florist-floweradvisor/id1185232807')" />
+        </div>
+        <div class="main">
+            <h1 style="color: #56358E;">Terms and Conditions</h1>
+            <ol>
+                <li>Promotion ends on October 31, 2017</li>
+                <li>Items will be discounted after Discount Code is applied. Discount Code: <b>HALLOW10</b></li>
+                <li>Not applicable for add-on item, delivery charges, and special discounted product</li>
+                <li>Not valid in conjunction with any other promotions, offers, discounts and vouchers</li>
+                <li>Management reserves the right to amend the terms and conditions without prior notice</li>
+            </ol>
+            <div class="button" onclick="window.open('https://www.floweradvisor.com.ph/flowersphilippines')">
+                <p>Make Someone's Day</p>
+            </div>
+        </div>
+        <hr />
+        <div class="footer">
+            <img src="assets/footer-logo.webp" alt="Footer Logo"
+                onclick="window.open('https://www.floweradvisor.com.ph')" />
+        </div>
+        <span>TOP Online Florist with Same &amp; Next Day Worldwide Flower Delivery Service. FlowerAdvisor is Online
+            Florist Philippines that offers same day &amp; next day flower delivery to Philippines and any countries
+            across the globe. FlowerAdvisor came as a result of a prominent absence of a single strong brand in
+            Philippines for <b>Flower Delivery Philippines</b>. Online users found it a struggle to discover a
+            trusted 24 hour delivery flower site which can be relied upon to send flowers around the world, hampers
+            and gifts to their loved ones anywhere in the world.</span>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function copyToClipboard(text) {
+        const input = document.createElement('input');
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+    }
+</script>
